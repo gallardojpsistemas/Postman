@@ -1,0 +1,129 @@
+{
+	"id": "e276426a-eea4-4e36-a5dc-b6a01e7ab9b6",
+	"name": "ReqRes",
+	"timestamp": "2022-03-05T22:16:33.842Z",
+	"collection_id": "19740868-7245d6cf-e9e2-4517-a09d-0a9745cfcdae",
+	"folder_id": "19740868-a2bcaca7-04ed-4534-a6f3-024840f5b010",
+	"environment_id": "19740868-d7b0c684-3276-4baf-8202-a175c8d3991e",
+	"totalPass": 6,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "67e600e6-af09-4984-b5e4-8a471c212555",
+			"name": "Create User",
+			"url": "https://reqres.in/api/users",
+			"time": 512,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				512
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "453a87e1-d5ef-4f7e-810e-1a91ec6eb16b",
+			"name": "Get Users (Test Avanzado)",
+			"url": "https://reqres.in/api/users?page=2",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate the whole response": true,
+				"validate correct user": true,
+				"validate incorrect user": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the whole response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate correct user": {
+					"pass": 1,
+					"fail": 0
+				},
+				"validate incorrect user": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				161
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate the whole response": true,
+					"validate correct user": true,
+					"validate incorrect user": true
+				}
+			]
+		},
+		{
+			"id": "5154a2c4-a5c9-49ec-a722-eb60871b4a13",
+			"name": "Registers",
+			"url": "https://reqres.in/api/register",
+			"time": 480,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				480
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1153,
+	"collection": {
+		"requests": [
+			{
+				"id": "67e600e6-af09-4984-b5e4-8a471c212555",
+				"method": "POST"
+			},
+			{
+				"id": "453a87e1-d5ef-4f7e-810e-1a91ec6eb16b",
+				"method": "GET"
+			},
+			{
+				"id": "5154a2c4-a5c9-49ec-a722-eb60871b4a13",
+				"method": "POST"
+			}
+		]
+	}
+}
