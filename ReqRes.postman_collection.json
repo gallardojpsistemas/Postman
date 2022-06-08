@@ -255,8 +255,8 @@
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
-									"console.info(\"Juanpi Info\");\r",
-									"console.warn(\"Juanpi Warning\");"
+									"console.info(\"Console Info\");\r",
+									"console.warn(\"Console Warning\");"
 								],
 								"type": "text/javascript"
 							}
