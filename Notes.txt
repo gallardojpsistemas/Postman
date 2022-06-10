@@ -13,3 +13,6 @@ Se guarda en una nueva carpeta llamada "newman"
 
 Coleccion exportada
 https://www.getpostman.com/collections/aebff87091911450f97d
+
+
+#newman run Pixabay.postman_collection.json  -r htmlextra -e pixabay-prod.postman_environment.json
