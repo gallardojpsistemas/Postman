@@ -1,0 +1,158 @@
+{
+	"id": "57cac7cd-261a-4945-bd88-3f860dfe95dc",
+	"name": "Pixabay",
+	"timestamp": "2022-06-10T00:21:40.636Z",
+	"collection_id": "19740868-8394f683-0edc-481e-9d21-d5dcd708f998",
+	"folder_id": 0,
+	"environment_id": "19740868-f047c29c-847b-423e-bc7d-bc505f870dee",
+	"totalPass": 6,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "23ae169d-3738-41f2-aa86-a1ee47d31e43",
+			"name": "Search Images",
+			"time": 317,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				309,
+				317
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "70e1793f-c3f5-4b7c-ab5f-d0f09c97fd61",
+			"name": "Search Images Red Flowers",
+			"time": 291,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				300,
+				291
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "76c33952-f7f1-4304-aa02-c97dfe59047f",
+			"name": "Search Images Category",
+			"time": 285,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				303,
+				285
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "ee02ddc8-eb50-4735-bac9-f87d09b5f5b3",
+			"name": "Search Images Headers",
+			"time": 777,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				307,
+				777
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "d09e5d60-fbe7-4809-8146-d40a7c5d99b4",
+			"name": "Search Images Test",
+			"time": 280,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body has flower-blue": true,
+				"Total hits is 500": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Body has flower-blue": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Total hits is 500": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				302,
+				280
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body has flower-blue": true,
+					"Total hits is 500": true
+				},
+				{
+					"Status code is 200": true,
+					"Body has flower-blue": true,
+					"Total hits is 500": true
+				}
+			]
+		}
+	],
+	"count": 2,
+	"totalTime": 3471,
+	"collection": {
+		"requests": [
+			{
+				"id": "23ae169d-3738-41f2-aa86-a1ee47d31e43",
+				"method": "GET"
+			},
+			{
+				"id": "70e1793f-c3f5-4b7c-ab5f-d0f09c97fd61",
+				"method": "GET"
+			},
+			{
+				"id": "76c33952-f7f1-4304-aa02-c97dfe59047f",
+				"method": "GET"
+			},
+			{
+				"id": "ee02ddc8-eb50-4735-bac9-f87d09b5f5b3",
+				"method": "GET"
+			},
+			{
+				"id": "d09e5d60-fbe7-4809-8146-d40a7c5d99b4",
+				"method": "GET"
+			}
+		]
+	}
+}
