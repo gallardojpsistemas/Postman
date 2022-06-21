@@ -165,7 +165,7 @@
 							"    pm.expect(jsonData.rating.rate).to.eql(4.1);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Validate available stock\", function () {\r",
+							"pm.test(\"Validate minimun stock available\", function () {\r",
 							"    pm.expect(jsonData.rating.count).be.above(200);\r",
 							"});\r",
 							""
@@ -593,7 +593,154 @@
 			]
 		},
 		{
-			"name": "Limit Var Products Test",
+			"name": "Products Category Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Validate size category products\", function () {\r",
+							"    pm.expect(jsonData).not.to.be.undefined\r",
+							"    let size_category = pm.variables.get(\"sizeCategory\")\r",
+							"    pm.expect(jsonData.length).to.eql(size_category);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate category products\", function () {\r",
+							"    pm.expect(jsonData).not.to.be.undefined\r",
+							"    let categories = pm.variables.get(\"categories\");\r",
+							"    pm.expect(jsonData[0]).to.eql(categories[0]);\r",
+							"    pm.expect(jsonData[1]).to.eql(categories[1]);\r",
+							"    pm.expect(jsonData[2]).to.eql(categories[2]);\r",
+							"    pm.expect(jsonData[3]).to.eql(categories[3]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"categories\", [\"electronics\",\"jewelery\",\"men's clothing\",\"women's clothing\"]);\r",
+							"pm.globals.set(\"sizeCategory\", pm.variables.get(\"categories\").length);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/products/categories",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products",
+						"categories"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Products Category Test",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fakestoreapi.com/products/categories",
+							"protocol": "https",
+							"host": [
+								"fakestoreapi",
+								"com"
+							],
+							"path": [
+								"products",
+								"categories"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 21 Jun 2022 10:54:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"3e-cdq81BKoKIRIQmboBVN84Vj+vkM\""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=tQkwb5Gqynb4A6T%2Fz3RHZapW2EwJY%2B0sYsxps2VmGl7JPdQn5bKa7WYpdr8wCZYYOoO0vEHPEhYbS%2BpMkQ5Qp8CUgJEJovYiUc5NIVTKSq6elJjMxqnWqPSyd9HmPnQV%2FVf6\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "71ec3320092876c5-LHR"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"electronics\",\n    \"jewelery\",\n    \"men's clothing\",\n    \"women's clothing\"\n]"
+				}
+			]
+		},
+		{
+			"name": "Limit Variable Products Test",
 			"event": [
 				{
 					"listen": "test",
