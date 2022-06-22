@@ -365,6 +365,168 @@
 			]
 		},
 		{
+			"name": "Add New Product Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Validate the whole response\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData).not.to.be.undefined\r",
+							"    pm.expect(jsonData.title).to.eql(pm.variables.get(\"title\"));\r",
+							"    pm.expect(jsonData.price).to.eql(pm.variables.get(\"price\"));\r",
+							"    pm.expect(jsonData.description).to.eql(pm.variables.get(\"description\"));\r",
+							"    pm.expect(jsonData.image).to.contains(\"https://fakestoreapi.com/img/\");\r",
+							"    pm.expect(jsonData.category).to.eql(pm.variables.get(\"category\"));\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"title\", \"Tablet 11pulgadas\");\r",
+							"pm.globals.set(\"price\", 99.9);\r",
+							"pm.globals.set(\"description\", \"Es una tablet de tamaño mediano para ver peliculas\");\r",
+							"pm.globals.set(\"image\", \"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg\");\r",
+							"pm.globals.set(\"category\", \"electronic\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Tablet 11pulgadas\",\r\n    \"price\": 99.9,\r\n    \"description\": \"Es una tablet de tamaño mediano para ver peliculas\",\r\n    \"image\": \"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg\",\r\n    \"category\": \"electronic\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakestoreapi.com/products/",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add New Product Test",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Tablet 11pulgadas\",\r\n    \"price\": 99.9,\r\n    \"description\": \"Es una tablet de tamaño mediano para ver peliculas\",\r\n    \"image\": \"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg\",\r\n    \"category\": \"electronic\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fakestoreapi.com/products/",
+							"protocol": "https",
+							"host": [
+								"fakestoreapi",
+								"com"
+							],
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 11:51:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"d0-Bfaqg8LHiL+VSuldMwSg0ezjkjA\""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=cx8NC%2Fr7lpiX2uwTXKUj6RrEw0K%2FRmoauMS5fztgcUyDGzx5upDONCItFkmiWuoomogvWF7Og3Hv8NCC0vxNEGbL5wiD5H7TGjhNZjkh0mn8sYvj4bon5yndIqAieto%2FjSbZ\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "71f4c4faaf3121b5-MIA"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 21,\n    \"title\": \"Tablet 11pulgadas\",\n    \"price\": 99.9,\n    \"description\": \"Es una tablet de tamaño mediano para ver peliculas\",\n    \"image\": \"https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg\",\n    \"category\": \"electronic\"\n}"
+				}
+			]
+		},
+		{
 			"name": "Limit Products Test",
 			"event": [
 				{
@@ -736,6 +898,145 @@
 					],
 					"cookie": [],
 					"body": "[\n    \"electronics\",\n    \"jewelery\",\n    \"men's clothing\",\n    \"women's clothing\"\n]"
+				}
+			]
+		},
+		{
+			"name": "Especific Users Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.test(\"Validate id and name user\", function () {\r",
+							"    pm.expect(jsonData).not.to.be.undefined\r",
+							"    let userId = pm.variables.get(\"id\")\r",
+							"    pm.expect(jsonData.id).to.eql(userId);\r",
+							"    pm.expect(jsonData.name.firstname).to.eql(pm.variables.get(\"firstName\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"id\", 3);\r",
+							"pm.globals.set(\"firstName\", \"kevin\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fakestoreapi.com/users/{{id}}",
+					"protocol": "https",
+					"host": [
+						"fakestoreapi",
+						"com"
+					],
+					"path": [
+						"users",
+						"{{id}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Especific Users Test",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fakestoreapi.com/users/{{id}}",
+							"protocol": "https",
+							"host": [
+								"fakestoreapi",
+								"com"
+							],
+							"path": [
+								"users",
+								"{{id}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 11:22:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"128-QWLW0942EG8Wj+7FYrSRxCYClWk\""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=18CiskrMAWD8CTRKocQWF%2BxZCiPI7AZoUQaxsSHyxV%2BWEqph6wL3vVccRLoqh4k9e8Wfxp9W5bhORfyPHY6DPtyT38%2Bqcm9Ss5FVzCt3MbvqQTX7rScmK1X1AdJmOXoYMskl\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "71f49a8faf0067da-MIA"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"address\": {\n        \"geolocation\": {\n            \"lat\": \"40.3467\",\n            \"long\": \"-30.1310\"\n        },\n        \"city\": \"Cullman\",\n        \"street\": \"Frances Ct\",\n        \"number\": 86,\n        \"zipcode\": \"29567-1452\"\n    },\n    \"id\": 3,\n    \"email\": \"kevin@gmail.com\",\n    \"username\": \"kevinryan\",\n    \"password\": \"kev02937@\",\n    \"name\": {\n        \"firstname\": \"kevin\",\n        \"lastname\": \"ryan\"\n    },\n    \"phone\": \"1-567-094-1345\",\n    \"__v\": 0\n}"
 				}
 			]
 		},
