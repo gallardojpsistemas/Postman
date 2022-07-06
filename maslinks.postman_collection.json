@@ -1,0 +1,418 @@
+{
+	"info": {
+		"_postman_id": "c7dcb81f-0095-4a58-b6d9-7b0b5d0bda81",
+		"name": "maslinks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19740868"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8001/web",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "https://www.madonna.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/web",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"web"
+					]
+				},
+				"description": "Scraping en Python para maslinks.com"
+			},
+			"response": [
+				{
+					"name": "https://www.alucinna.com.ar",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://www.alucinna.com.ar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8001/web",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"web"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 06 Jul 2022 22:18:50 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "3261"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"contacts\": {\n        \"contact_page\": [\n            \"/contacto/\"\n        ],\n        \"mail\": [\n            \"cv@alucinna.com.ar\"\n        ],\n        \"whatsapp\": [\n            \"https://wa.me/5493794225535\"\n        ],\n        \"phones\": []\n    },\n    \"main_sections\": [\n        {\n            \"title\": \"Tienda Online de Alucinna Trendy Shoes - Sucursales\",\n            \"description\": \"Alucinna Trendy Shoes - Corrientes 9 de Julio 1185 - Corrientes Capital (CP: 3400) Lunes a sábado de 9:30 a 13:00 y de 17:00 a 21:00 hs Alucinna Trendy Shoes...\",\n            \"url\": \"https://www.alucinna.com.ar/sucursales/\"\n        },\n        {\n            \"title\": \"Comprar Liquidación en Alucinna Trendy Shoes | Filtrado por Más ...\",\n            \"description\": \"Comprá online productos de Liquidación desde $1.897,50. Tenemos libano blanco, atenea chocolate y más. Hacé tu pedido, pagalo online y recibilo donde quieras.\",\n            \"url\": \"https://www.alucinna.com.ar/liquidacion/\"\n        },\n        {\n            \"title\": \"Accesorios | Alucinna Trendy Shoes | Filtrado por Más Nuevo al más ...\",\n            \"description\": \"Comprá accesorios de cuero y eco cuero en cuotas sin interés y elevá tu outfit. También tenemos mochilas y carteras ¡El envío es gratis!\",\n            \"url\": \"https://www.alucinna.com.ar/accesorios/\"\n        },\n        {\n            \"title\": \"Alucinna Trendy Shoes\",\n            \"description\": \"Los zapatos más lindos. Variedad en materiales. Cuero y eco cuero. Envíos a todo el país. Pagá en cuotas sin interés. Descuentos exclusivos por transf. bcria.\",\n            \"url\": \"https://www.alucinna.com.ar/br/\"\n        },\n        {\n            \"title\": \"Comprar Marcas en Alucinna Trendy Shoes | Filtrado por Más ...\",\n            \"description\": \"Comprá online productos de Marcas desde $500,00. Tenemos fiona rosa, cocu negro y más. Hacé tu pedido, pagalo online y recibilo donde quieras.\",\n            \"url\": \"https://www.alucinna.com.ar/marcas/\"\n        },\n        {\n            \"title\": \"Sandalias de verano | Alucinna Trendy Shoes | Filtrado por Más ...\",\n            \"description\": \"Comprá las mejores sandalias y zapatillas de verano en Alucinna Trendy Shoes. Lucí y sentite cómoda con unos zapatos frescos de mujer adaptados a tu estilo. ¡Tenemos descuentos y cuotas sin interés!\",\n            \"url\": \"https://www.alucinna.com.ar/verano/\"\n        },\n        {\n            \"title\": \"Contacto - Alucinna Trendy Shoes\",\n            \"description\": \"Instagram: @alucinna - WhatsApp: 379-4225535. BRANCH SRL\",\n            \"url\": \"https://www.alucinna.com.ar/contacto/\"\n        },\n        {\n            \"title\": \"Comprar Kids en Alucinna Trendy Shoes | Filtrado por Más Vendidos\",\n            \"description\": \"Comprá online productos de Kids desde $3.050,00. Tenemos extra rosa, extra gris y más. Hacé tu pedido, pagalo online y recibilo donde quieras.\",\n            \"url\": \"https://www.alucinna.com.ar/kids/\"\n        },\n        {\n            \"title\": \"Comprar em Alucinna Trendy Shoes | Filtrado por Mais Novo ao ...\",\n            \"description\": \"Compre online  por $2.185,00. Temos zapas vila color blanco y negro, marcel negro negro e mais. Faça seu pedido, pague-o online e receba onde quiser.\",\n            \"url\": \"https://www.alucinna.com.ar/br/zapatillas/\"\n        },\n        {\n            \"title\": \"Filter by Best Selling - Buy in Alucinna Trendy Shoes\",\n            \"description\": \"Buy online  products starting at $990,00. We got palo negro, opalo chocolate and more. Make your order, pay online and receive anywhere.\",\n            \"url\": \"https://www.alucinna.com.ar/us/cuero/\"\n        }\n    ],\n    \"social_links\": {\n        \"facebook\": [\n            \"https://www.facebook.com/alucinna\"\n        ],\n        \"instagram\": [\n            \"https://instagram.com/alucinna\"\n        ],\n        \"twitter\": [],\n        \"linkedin\": [],\n        \"pinterest\": [],\n        \"youtube\": [],\n        \"tiktok\": []\n    },\n    \"logo\": [\n        \"//d3ugyf2ht6aenh.cloudfront.net/stores/698/408/themes/common/logo-1631707919-1653422618-7537010263474c34ca76fc2b1254496b1653422619-480-0.png?0\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8001/linktree",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "https://linktr.ee/faccmaargentina",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/linktree",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"linktree"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Vivipedraglio",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://linktr.ee/Vivipedraglio",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8001/linktree",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"linktree"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 05 Jul 2022 20:49:50 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "1937"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"page_title\": \"@vivipedraglio\",\n    \"username\": \"Vivipedraglio\",\n    \"is_verified\": true,\n    \"links\": [\n        {\n            \"link\": \"https://youtu.be/HMmHr-eIcxI\",\n            \"text\": \"EXPANDE TU PROPIA LUZ\",\n            \"type\": \"YOUTUBE_VIDEO\"\n        },\n        {\n            \"link\": \"\",\n            \"text\": \"ARCTURIAN\",\n            \"type\": \"HEADER\"\n        },\n        {\n            \"link\": \"\",\n            \"text\": \"👽 SESIONES SUSPENDIDAS HASTA SEP 2022 👽\",\n            \"type\": \"FORM\"\n        },\n        {\n            \"link\": \"https://youtube.com/shorts/Q6_O55Pk86Y?feature=share\",\n            \"text\": \"AUTOUPDATE\",\n            \"type\": \"CLASSIC\"\n        },\n        {\n            \"link\": \"https://www.youtube.com/c/ViviPedraglio\",\n            \"text\": \"YOUTUBE\",\n            \"type\": \"CLASSIC\"\n        },\n        {\n            \"link\": \"https://vivipedraglio.bandcamp.com\",\n            \"text\": \"STORE\",\n            \"type\": \"CLASSIC\"\n        },\n        {\n            \"link\": \"https://open.spotify.com/artist/78DLX7TvmqSkiRNryJHdxe?nd=1\",\n            \"text\": \"SPOTIFY\",\n            \"type\": \"CLASSIC\"\n        },\n        {\n            \"link\": \"\",\n            \"text\": \"PAYPAL DONATION\",\n            \"type\": \"COMMERCE_PAY\"\n        },\n        {\n            \"link\": \"https://t.me/frecuencias432\",\n            \"text\": \"TELEGRAM PAGE\",\n            \"type\": \"CLASSIC\"\n        },\n        {\n            \"link\": \"https://anchor.fm/vivipedraglio\",\n            \"text\": \"PODCAST PAGE\",\n            \"type\": \"CLASSIC\"\n        },\n        {\n            \"link\": \"https://odysee.com/@vivipedraglio\",\n            \"text\": \"ODYSEE\",\n            \"type\": \"CLASSIC\"\n        }\n    ],\n    \"text\": \"Sound Designer, Bioenergetic therapist, Binaural Beats, Soundhack.\",\n    \"social_icons\": {\n        \"facebook\": \"https://www.facebook.com/vivipedraglio3\",\n        \"twitter\": \"https://twitter.com/vivipedraglio\",\n        \"instagram\": \"https://instagram.com/vivipedraglio\",\n        \"spotify\": \"https://open.spotify.com/artist/78DLX7TvmqSkiRNryJHdxe?si=P7Ae4KP3TdmDiGGGzid1nA\",\n        \"youtube\": \"https://www.youtube.com/c/ViviPedraglio\",\n        \"soundcloud\": \"https://www.soundcloud.com/ViviPedraglio\",\n        \"apple_music\": \"https://music.apple.com/ar/artist/vivi-pedraglio/291843888?l=en\",\n        \"linkedin\": \"https://www.linkedin.com/in/vivipedraglio\",\n        \"pinterest\": \"https://pinterest.com/vivipedraglio\",\n        \"email_address\": \"mailto:infofrecuencias432@gmail.com\",\n        \"apple_podcast\": \"https://podcasts.apple.com/ar/podcast/vivi-pedraglio-podcast/id1504327218\",\n        \"telegram\": \"https://t.me/vivipedraglio\",\n        \"bandcamp\": \"https://vivipedraglio.bandcamp.com\"\n    },\n    \"profile_image_link\": \"https://d1fdloi71mui9q.cloudfront.net/IIWCwXNIQry3xapBNxof_vWH3jop9Zi8B9lx7\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8001/instagram",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "https://www.instagram.com/vivipedraglio/",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/instagram/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"instagram",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "loboctes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://www.instagram.com/loboctes/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8001/instagram",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"instagram"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 05 Jul 2022 20:49:44 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "774"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"loboctes\",\n    \"display_name\": \"Juan Godoy\",\n    \"bio\": \"Papa de Juan Tomas 🐺\\nCorrentino 🐊\\nVisto a mi hijo en @mini.sapling 👕👚\\nAmante de los fiambres en @la_picadita_ctes 🧀🥓\",\n    \"bio_link\": null,\n    \"detected_accounts\": [\n        \"https://instagram.com/mini.sapling\",\n        \"https://instagram.com/la_picadita_ctes\"\n    ],\n    \"detected_emails\": [],\n    \"detected_urls\": [],\n    \"followers\": 485,\n    \"following\": 1888,\n    \"picture\": \"https://instagram.fcnq2-2.fna.fbcdn.net/v/t51.2885-19/200151364_343394273840135_5146199826500174559_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fcnq2-2.fna.fbcdn.net&_nc_cat=111&_nc_ohc=TywFZFgsWwYAX9lb7_u&edm=ABfd0MgBAAAA&ccb=7-5&oh=00_AT-iqvm5WMNn4aGi7giErGNCuJcqZFW8C2-OGGpjqm_a_Q&oe=62CB9DB1&_nc_sid=7bff83\",\n    \"posts\": 393,\n    \"tagline\": null,\n    \"is_private\": true,\n    \"is_verified\": false\n}"
+				},
+				{
+					"name": "vivipedraglio",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://www.instagram.com/vivipedraglio/",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8001/instagram",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8001",
+							"path": [
+								"instagram"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 05 Jul 2022 20:54:37 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "939"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"vivipedraglio\",\n    \"display_name\": \"Vivi Pedraglio 👽 Shahida\",\n    \"bio\": \"#sounddesigner #fieldrecording #clairaudient @pdgmusica @frecuenciasarcturianas\\nEndorsed: @promusicacentral @ovnidrum @nektarbambu\",\n    \"bio_link\": \"https://linktr.ee/Vivipedraglio\",\n    \"detected_accounts\": [\n        \"https://instagram.com/nektarbambu\",\n        \"https://instagram.com/pdgmusica\",\n        \"https://instagram.com/ovnidrum\",\n        \"https://instagram.com/frecuenciasarcturianas\",\n        \"https://instagram.com/promusicacentral\"\n    ],\n    \"detected_emails\": [],\n    \"detected_urls\": [],\n    \"followers\": 18901,\n    \"following\": 3671,\n    \"picture\": \"https://instagram.fcnq2-1.fna.fbcdn.net/v/t51.2885-19/116435335_648336419120738_8698721179704942064_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fcnq2-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=aURtQcR0X8cAX-L4DWy&edm=ABfd0MgBAAAA&ccb=7-5&oh=00_AT_kUTTV3MD0qrj2Q-weL_uFPQQeqBXMpfXrYhp7sqLZHw&oe=62CC68A0&_nc_sid=7bff83\",\n    \"posts\": 467,\n    \"tagline\": \"Artist\",\n    \"is_private\": false,\n    \"is_verified\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "herokuapp.com/web",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "https://www.madonna.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://maslinks-scrapers.herokuapp.com/web",
+					"protocol": "https",
+					"host": [
+						"maslinks-scrapers",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"web"
+					]
+				},
+				"description": "Scraping en Python para maslinks.com"
+			},
+			"response": []
+		},
+		{
+			"name": "herokuapp.com/linktree",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "https://linktr.ee/faccmaargentina",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://maslinks-scrapers.herokuapp.com/linktree",
+					"protocol": "https",
+					"host": [
+						"maslinks-scrapers",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"linktree"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "herokuapp.com/instagram",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "https://www.instagram.com/vivipedraglio/",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://maslinks-scrapers.herokuapp.com/instagram",
+					"protocol": "https",
+					"host": [
+						"maslinks-scrapers",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"instagram"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
